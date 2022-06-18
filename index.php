@@ -152,7 +152,7 @@ imagedestroy($watermark);
 
  
 	//imagecopy($image, $imgResized_logo, ($canvas_w-$logo_w)/2, ($canvas_h-$logo_h)/2-22, 0, 0,  $logo_w, $logo_h);
-	$filename_result = "".md5(date('dmyhis').rand(1111,2222)).".jpg";
+	$filename_result = "a.jpg";
 	imagepng($image, $filename_result); 
 	echo $filename_result;
 	imagedestroy($image);
