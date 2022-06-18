@@ -1,6 +1,7 @@
 {
+    "name": "kidy/adsa",
     "require": {
-        "ext-gd": "^0.0.0",
-		"php": ">=5.6.0"
+        "php": ">=5.6.0",
+        "ext-gd": "*"
     }
 }
