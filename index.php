@@ -3,7 +3,7 @@
 /**
  *
  * PHP Image Watermark
- * Copyright (c) 2013 Andr� Catita http://andrecatita.com
+ * Copyright (c) 2013 André Catita http://andrecatita.com
  * http://github.com/andreCatita/
  *
  * GNU General Public License, version 2 (GPL-2.0)
@@ -140,11 +140,21 @@ switch ($place) {
 	break;
 }
 
-// Output JPEG
+/* // Output JPEG
 header('Content-Type: image/jpeg');
 imagejpeg($image, null, $quality);
 
 // Clear Memory
 imagedestroy($image);
 imagedestroy($watermark);
+ */
+
+
+ 
+	//imagecopy($image, $imgResized_logo, ($canvas_w-$logo_w)/2, ($canvas_h-$logo_h)/2-22, 0, 0,  $logo_w, $logo_h);
+	$filename_result = "".md5(date('dmyhis').rand(1111,2222)).".jpg";
+	imagepng($image, $filename_result); 
+	echo $filename_result;
+	imagedestroy($image);
+	imagedestroy($watermark); 
 ?>
